@@ -20,25 +20,20 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - setuptools
   run:
-    - python >=3.6
-    - pandas
-    - ipython
-    - numpy
-    - scipy
-    - matplotlib-base
+    - python >=3.7
+    - pandas >=1.1
+    - ipython >=7
+    - numpy >=1.21
+    - scipy >=1.7
+    - matplotlib-base >=3.5
     - six
     - future
-    - qtpy
     - pyyaml
-    - pyqtgraph
     - pyvisa
     - sip
-    - traits
-    - bokeh
-    - traitsui
 
 test:
   imports:
