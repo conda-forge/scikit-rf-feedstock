@@ -14,16 +14,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pandas
     - ipython
     - numpy
@@ -41,6 +41,8 @@ requirements:
     - traitsui
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - skrf
     - skrf.calibration
